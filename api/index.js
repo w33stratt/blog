@@ -1,6 +1,5 @@
 import express from "express";
 import authRoutes from "./routes/auth.js";
-import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import cookieParser from "cookie-parser";
 import multer from "multer";
@@ -18,7 +17,12 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage });
+const maxSize = 1 * 1024 * 1024 
+const upload = multer({ 
+  storage: storage,
+limits: {fileSize: maxSize}
+});
+
 
 app.post("/api/upload", upload.single("file"), function (req, res) {
   const file = req.file;
@@ -26,7 +30,6 @@ app.post("/api/upload", upload.single("file"), function (req, res) {
 });
 
 app.use("/api/auth", authRoutes);
-app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 
 app.listen(8800, () => {

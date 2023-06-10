@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -31,7 +30,7 @@ const Login = () => {
     };
     return (
         <div className="auth">
-            <h1>Login</h1>
+            <h1>Hallo</h1>
             <form>
                 <input
                     required

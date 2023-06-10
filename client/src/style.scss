@@ -9,6 +9,7 @@ $lightGreen: #b9e7e7;
     .link {
       text-decoration: none;
       color: inherit;
+ 
     }
     //LOGIN & REGISTER
 
@@ -25,10 +26,14 @@ $lightGreen: #b9e7e7;
   bottom:0px;
   left:0px;
       background-color: $lightGreen;
-
+      background-image: 
+      url(
+    "https://r4.wallpaperflare.com/wallpaper/677/667/795/united-arab-emirates-dubai-reflection-on-midnight-4k-ultra-hd-desktop-wallpapers-for-computers-laptop-tablet-and-mobile-phones-3840%C3%972400-wallpaper-0020d529df168e43180fc706dbe69408.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
       h1 {
         font-size: 20px;
-        color: teal;
+        color: white;
         margin-bottom: 20px;
       }
 
@@ -242,10 +247,11 @@ $lightGreen: #b9e7e7;
         .edit {
           display: flex;
           gap: 5px;
+          margin-left: 50px;
 
           img {
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             cursor: pointer;
           }
         }
